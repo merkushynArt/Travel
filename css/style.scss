@@ -44,6 +44,10 @@ body {
    overflow-x: hidden;
 }
 
+section {
+   padding: 3rem 9%;
+}
+
 .btn {
    margin-top: 1rem;
    display: inline-block;
@@ -60,6 +64,8 @@ body {
       color: $black-bg;
    }
 }
+
+//Header-section==================================================================================================================
 
 .header {
    position: fixed;
@@ -107,6 +113,45 @@ body {
    display: none;
 }
 
+//Home-section==============================================================================================================
+.home {
+   margin: 9rem auto 0;
+   padding-bottom: 5rem;
+   width: 90%;
+   border-radius: 1rem;
+   background: linear-gradient($black-bg, $black-bg), url(../images/home-bg.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 80vh;
+
+   .content {
+      text-align: center;
+
+      span {
+         font-weight: bolder;
+         color: transparent;
+         -webkit-text-stroke: .1rem $white;
+         font-size: 4vw;
+      }
+
+      h3 {
+         font-size: 6vw;
+         color: $white;
+      }
+
+      p {
+         max-width:  60rem;
+         margin: 2rem auto;
+         font-size: 1.4rem;
+         color: $light-color;
+         line-height: 2;
+      }
+   }
+}
+
 
 
 
@@ -115,6 +160,10 @@ body {
 @media(max-width: 991px) {
    html {
       font-size: 55%;
+   }
+
+   section {
+      padding: 3rem 2rem;
    }
 
    .header {
@@ -145,6 +194,21 @@ body {
             margin: 2rem;
             font-size: 2rem;
             display: block;
+         }
+      }
+   }
+
+   .home {
+      margin: 10rem auto 0;
+
+      .content {
+         span {
+            font-size: 8vw;
+
+         }
+
+         h3 {
+            font-size: 9vw;
          }
       }
    }
