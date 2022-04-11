@@ -20,6 +20,12 @@ $bg-color:#222;
 $black-bg:rgba(17,17,17,.7);
 $border:.2rem solid $blue;
 
+@mixin grid($val) {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+gap: 1.5rem;
+}
+
 html {
    font-size: 62.5%;
    overflow-x: hidden;
@@ -46,6 +52,22 @@ body {
 
 section {
    padding: 3rem 9%;
+}
+
+.heading {
+   text-align: center;
+   margin-bottom: 2rem;
+
+   span {
+      color: $blue;
+      font-size: 2rem;
+   }
+
+   h1 {
+      font-size: 4rem;
+      color: $white;
+      margin-top: .5rem;
+   }
 }
 
 .btn {
@@ -254,6 +276,62 @@ section {
    }
 }
 
+//Dastination==============================================================================================================
+.destination {
+   .box-container {
+      @include grid(27rem)
+   }
+
+   .box {
+      border-radius: 1rem;
+      overflow: hidden;
+      background: $bg-color;
+
+      .image {
+         height: 20rem;
+         overflow: hidden;
+         width: 100%;
+
+         &:hover {
+            img {
+               transform: scale(1.1);
+            }
+         }
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      .content {
+         padding: 2rem;
+         text-align: center;
+
+         h3 {
+            font-size: 2rem;
+            color: $white;
+         }
+
+         p {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
+         }
+
+         a {
+            font-size: 1.7rem;
+            color: $blue;
+
+            &:hover i{
+               padding-left: 1rem;
+            }
+         }
+      }
+   }
+}
 
 
 
