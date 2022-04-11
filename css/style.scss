@@ -333,6 +333,43 @@ section {
    }
 }
 
+//Services=================================================================================================================
+.services {
+   .box-container {
+      @include grid(32rem);
+
+      .box {
+         background: $bg-color;
+         border-radius: 1rem;
+         padding: 3rem 2rem;
+         text-align: center;
+         border: .2rem solid $black;
+
+         &:hover {
+            border: .2rem solid $blue;
+         }
+
+         i {
+            font-size: 4rem;
+            color: $blue;
+            margin-bottom: 2rem;
+         }
+
+         h3 {
+            font-size: 2rem;
+            color: $white;
+         }
+
+         p {
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: $light-color;
+            line-height: 2;
+         }
+      }
+   }
+}
+
 
 
 //media queries===========================================================================================================
