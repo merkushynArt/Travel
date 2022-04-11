@@ -194,6 +194,66 @@ section {
    }
 }
 
+//About===================================================================================================================
+.about {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem;
+   margin-top: 5rem;
+
+   .video-container {
+      flex: 1 1 42rem;
+
+      video {
+         width: 100%;
+         border-radius: 1rem;
+      }
+
+      .controls {
+         text-align: center;
+         padding: 2rem 0;
+
+         span {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: $white;
+            cursor: pointer;
+            margin: .7rem;
+
+            &:hover {
+               background: $blue;
+            }
+         }
+      }
+   }
+
+   .content {
+      flex: 1 1 42rem;
+      margin-bottom: 5rem;
+
+      span {
+         color: $blue;
+         font-size: 2rem;
+      }
+
+      h3 {
+         color: $white;
+         font-size: 4rem;
+         margin-top: 0.5rem;
+      }
+
+      p {
+         padding:  1rem 0;
+         color: $light-color;
+         font-size: 1.4rem;
+         line-height: 2;
+      }
+   }
+}
+
 
 
 
@@ -261,4 +321,11 @@ section {
       font-size: 50%;
    }
 
+   .about {
+      .content {
+         h3 {
+            font-size: 3.5rem;
+         }
+      }
+   }
 }
