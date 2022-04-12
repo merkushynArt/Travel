@@ -1,7 +1,12 @@
+
 let navbar = document.querySelector('.header .navbar');
 
 document.querySelector('#menu-btn').onclick = () => {
    navbar.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+   navbar.classList.remove('active');
 }
 
 document.querySelectorAll('.control-btn').forEach(btn =>{
@@ -10,4 +15,5 @@ document.querySelectorAll('.control-btn').forEach(btn =>{
       document.querySelector('.video').src = src;
    }
 })
+
 

@@ -28,21 +28,23 @@ gap: 1.5rem;
 
 html {
    font-size: 62.5%;
-   overflow-x: hidden;
+   //overflow-x: hidden;
+   
    scroll-behavior: smooth;
    scroll-padding-top: 9rem;
-
+   
    &::-webkit-scrollbar {
       width: 1rem;
    }
-
+   
    &::-webkit-scrollbar-track {
       background: $black;
    }
-
+   
    &::-webkit-scrollbar-thumb {
       background: $blue;
    }
+   
 }
 
 body {
@@ -279,7 +281,7 @@ section {
 //Dastination==============================================================================================================
 .destination {
    .box-container {
-      @include grid(27rem)
+      @include grid(27rem);
    }
 
    .box {
@@ -402,6 +404,84 @@ section {
    }
 }
 
+//Review================================================================================================================
+.review {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 2rem;
+
+   .content {
+      flex: 1 1 42rem;
+
+      span {
+         font-size: 2rem;
+         color: $blue;
+      }
+
+      h3 {
+         font-size: 3rem;
+         color: $white;
+      }
+
+      p {
+         font-size: 1.4rem;
+         color: $light-color;
+         padding: 1rem 0;
+         line-height: 2;
+      }
+   }
+
+   .box-container {
+      flex: 1 1 42rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      .box {
+         flex: 1 1  20rem;
+         border-radius: 1rem;
+         padding: 2rem;
+         background: $bg-color;
+         border: .2rem solid $black;
+
+         &:hover {
+            border: .2rem solid $blue;
+         }
+
+         p {
+            font-size: 1.4rem;
+            padding-bottom: 1rem;
+            line-height: 2;
+            color: $light-color;
+         }
+
+         .user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+               height: 5rem;
+               width: 5rem;
+               object-fit: 50%
+            }
+
+            h3 {
+               font-size: 1.7rem;
+               color: $white;
+            }
+
+            span {
+               font-size: 1.5rem;
+               color: $light-color;
+            }
+         }
+      }
+   }
+}
+
+
 //Blogs=================================================================================================================
 .blogs {
    .box-container {
@@ -472,7 +552,7 @@ section {
    }
 }
 
-//banner===================================================================================================================
+//Banner===================================================================================================================
 .banner {
    background: linear-gradient($black-bg, $black-bg), url(../images/banner-bg.jpg) no-repeat;
    background-size: cover;
@@ -512,7 +592,6 @@ section {
 
    .box-container{
       @include grid(25rem);
-      padding: 0 2rem;
 
       .box{
          padding:1rem 0;
