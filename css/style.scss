@@ -472,11 +472,47 @@ section {
    }
 }
 
+//banner===================================================================================================================
+.banner {
+   background: linear-gradient($black-bg, $black-bg), url(../images/banner-bg.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+   padding: 3rem 2rem;
+   background-attachment: fixed;
+   text-align: center;
+
+   .content {
+
+      span {
+         font-size: 2rem;
+         color: $blue;
+      }
+
+      h3 {
+         font-size: 4rem;
+         color: $white;
+         margin-top: 1rem;
+      }
+
+      p {
+         max-width: 60rem;
+         margin: 1rem auto;
+         font-size: 1.4rem;
+         color: $light-color;
+         line-height: 2;
+      }
+   }
+}
+
+
+
 //Footer==================================================================================================================
+
 .footer{
 
    .box-container{
       @include grid(25rem);
+      padding: 0 2rem;
 
       .box{
          padding:1rem 0;
@@ -567,6 +603,14 @@ section {
    color: $light-color;
 }
 
+.credit {
+   background: $bg-color;
+   text-align: center;
+   font-size: 2rem;
+   padding: 2rem 1rem;
+   color: $light-color;
+}
+
 
 
 //media queries===========================================================================================================
@@ -637,6 +681,14 @@ section {
       .content {
          h3 {
             font-size: 3.5rem;
+         }
+      }
+   }
+
+   .banner {
+      .content {
+         h3 {
+            font-size: 2.7rem;
          }
       }
    }
